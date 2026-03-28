@@ -38,7 +38,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Company Story */}
-      <section className="bg-gradient-to-b from-sage-light/50 to-sand py-16 sm:py-20">
+      <section className="bg-gradient-to-b from-sage-light/50 to-sand pb-16 pt-24 sm:pb-20 sm:pt-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
             <h1 className="font-heading text-4xl font-bold text-charcoal md:text-5xl">
