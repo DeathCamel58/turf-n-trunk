@@ -33,6 +33,9 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# optimized images (generated from originals via npm run optimize-images)
+/public/images/optimized/
+
 # vercel
 .vercel
 

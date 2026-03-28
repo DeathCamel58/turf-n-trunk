@@ -1,17 +1,34 @@
 import Link from "next/link";
 import PlaceholderImage from "./PlaceholderImage";
 import GrassBlades from "./GrassBlades";
+import HeroBackground from "./HeroBackground";
+import type { OptimizedImageData } from "./OptimizedImage";
+
+// Import the manifest at build time to get the hero image data.
+// Falls back to a simple background if the image hasn't been optimized.
+let heroImage: OptimizedImageData | null = null;
+try {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const manifest = require("../../public/images/optimized/manifest.json");
+  heroImage = manifest["Corner-Lot-Landscaping"] ?? null;
+} catch {
+  // Manifest doesn't exist yet — pipeline hasn't run
+}
 
 export default function Hero() {
   return (
     <section className="relative overflow-x-clip">
-      {/* Parallax background */}
-      <div
-        className="absolute inset-0 bg-fixed bg-cover bg-center"
-        style={{ backgroundImage: "url('/Corner-Lot-Landscaping.jpg')" }}
-        aria-hidden="true"
-      />
-      {/* Dark overlay for text readability over future photo */}
+      {/* Parallax background with progressive loading */}
+      {heroImage ? (
+        <HeroBackground image={heroImage} />
+      ) : (
+        <div
+          className="absolute inset-0 bg-fixed bg-cover bg-center"
+          style={{ backgroundImage: "url('/Corner-Lot-Landscaping.jpg')" }}
+          aria-hidden="true"
+        />
+      )}
+      {/* Dark overlay for text readability */}
       <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
 
       <div className="relative mx-auto max-w-7xl px-4 pb-32 pt-24 sm:px-6 sm:pb-36 sm:pt-32 lg:px-8">
