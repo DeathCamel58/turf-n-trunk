@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { PHONE, PHONE_HREF } from "@/app/lib/constants";
 import PhoneLink from "./PhoneLink";
 
@@ -19,10 +20,15 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-cream shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="flex items-baseline gap-1 font-heading text-2xl font-bold">
-          <span className="text-forest">Turf</span>
-          <span className="text-charcoal">n</span>
-          <span className="text-bark">Trunk</span>
+        <Link href="/" className="flex-shrink-0">
+          <Image
+            src="/logo.svg"
+            alt="Turf n Trunk Landscaping"
+            width={200}
+            height={50}
+            priority
+            className="h-10 w-auto sm:h-12"
+          />
         </Link>
 
         {/* Desktop nav */}

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none">
+  <!-- Icon: tree with trunk and grass base -->
+  <g transform="translate(10, 5)">
+    <!-- Tree canopy - layered organic shapes -->
+    <ellipse cx="42" cy="28" rx="26" ry="22" fill="#2D5A27"/>
+    <ellipse cx="30" cy="34" rx="18" ry="16" fill="#3A7233"/>
+    <ellipse cx="54" cy="32" rx="16" ry="14" fill="#3A7233"/>
+    <ellipse cx="42" cy="22" rx="16" ry="14" fill="#4A8B43"/>
+
+    <!-- Trunk -->
+    <path d="M38 44 L36 78 Q36 82 40 82 L44 82 Q48 82 48 78 L46 44" fill="#6B4226"/>
+    <!-- Trunk texture lines -->
+    <path d="M40 50 Q42 52 44 50" stroke="#8B5A3A" stroke-width="0.8" fill="none"/>
+    <path d="M39 58 Q42 60 45 58" stroke="#8B5A3A" stroke-width="0.8" fill="none"/>
+    <path d="M38 66 Q42 68 46 66" stroke="#8B5A3A" stroke-width="0.8" fill="none"/>
+
+    <!-- Grass blades at base -->
+    <path d="M18 88 Q20 68 24 62 Q22 72 26 88 Z" fill="#2D5A27"/>
+    <path d="M24 88 Q28 70 26 58 Q28 68 32 88 Z" fill="#3A7233"/>
+    <path d="M30 88 Q30 72 34 64 Q33 74 36 88 Z" fill="#2D5A27"/>
+    <path d="M48 88 Q50 72 48 62 Q51 70 54 88 Z" fill="#3A7233"/>
+    <path d="M52 88 Q56 70 58 60 Q56 72 60 88 Z" fill="#2D5A27"/>
+    <path d="M58 88 Q60 74 64 66 Q61 76 66 88 Z" fill="#3A7233"/>
+
+    <!-- Ground line -->
+    <ellipse cx="42" cy="86" rx="32" ry="4" fill="#2D5A27" opacity="0.3"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(100, 18)">
+    <!-- "Turf" in forest green -->
+    <text x="0" y="38" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="44" fill="#2D5A27" letter-spacing="-1">Turf</text>
+    <!-- "n" smaller, lighter -->
+    <text x="108" y="38" font-family="Georgia, 'Times New Roman', serif" font-weight="400" font-size="32" fill="#5A5A5A" letter-spacing="-0.5">n</text>
+    <!-- "Trunk" in bark brown -->
+    <text x="134" y="38" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="44" fill="#6B4226" letter-spacing="-1">Trunk</text>
+
+    <!-- Tagline -->
+    <text x="1" y="60" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="13" fill="#7A9E7E" letter-spacing="3.5">LANDSCAPING</text>
+  </g>
+</svg>

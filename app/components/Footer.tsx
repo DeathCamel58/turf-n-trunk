@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   BUSINESS_NAME,
   PHONE,
@@ -22,12 +23,14 @@ export default function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {/* Business info */}
           <div>
-            <p className="font-heading text-xl font-bold">
-              <span className="text-sage-light">Turf</span>{" "}
-              <span className="text-white/70">n</span>{" "}
-              <span className="text-amber-200">Trunk</span>
-            </p>
-            <p className="mt-2 text-sm text-white/70">
+            <Image
+              src="/logo.svg"
+              alt="Turf n Trunk Landscaping"
+              width={180}
+              height={45}
+              className="h-10 w-auto brightness-0 invert"
+            />
+            <p className="mt-3 text-sm text-white/70">
               Professional landscaping for Peachtree City and the surrounding
               communities.
             </p>
