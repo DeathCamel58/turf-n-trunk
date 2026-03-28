@@ -2,7 +2,7 @@ import Link from "next/link";
 import { createMetadata } from "@/app/lib/metadata";
 import { SERVICES } from "@/app/lib/constants";
 import ServiceIcon from "@/app/components/ServiceIcon";
-import CTABanner from "@/app/components/CTABanner";
+import QuoteSection from "@/app/components/QuoteSection";
 
 export const metadata = createMetadata(
   "Landscaping Services in Peachtree City, GA",
@@ -54,11 +54,9 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <CTABanner
+      <QuoteSection
         heading="Not Sure What You Need?"
-        subtext="No problem — contact us for a free consultation and we'll recommend the right services for your property."
-        buttonText="Request a Free Quote"
-        buttonHref="/contact"
+        subtext="No problem — fill out the form and we'll recommend the right services for your property."
       />
     </>
   );

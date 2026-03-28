@@ -5,8 +5,8 @@ import { SERVICES, CITY_SLUGS } from "@/app/lib/constants";
 import { SERVICE_CONTENT } from "./content";
 import PlaceholderImage from "@/app/components/PlaceholderImage";
 import ServiceIcon from "@/app/components/ServiceIcon";
-import CTABanner from "@/app/components/CTABanner";
 import FaqJsonLd from "@/app/components/FaqJsonLd";
+import QuoteSection from "@/app/components/QuoteSection";
 
 export async function generateStaticParams() {
   return SERVICES.map((service) => ({ slug: service.slug }));
@@ -78,12 +78,12 @@ export default async function ServicePage({
               <p className="mt-4 max-w-3xl text-lg leading-relaxed text-white/80">
                 {content.intro}
               </p>
-              <Link
-                href="/contact"
+              <a
+                href="#quote"
                 className="mt-8 inline-block rounded-full bg-cream px-8 py-3 font-bold text-forest transition-colors hover:bg-white"
               >
-                Get a Free Estimate
-              </Link>
+                Request a Free Quote
+              </a>
             </div>
           </div>
         </div>
@@ -193,11 +193,9 @@ export default async function ServicePage({
         </div>
       </section>
 
-      <CTABanner
-        heading={`Ready for Professional ${service.title}?`}
-        subtext="Contact us today for a free, no-obligation estimate. We'd love to help."
-        buttonText="Request a Free Quote"
-        buttonHref="/contact"
+      <QuoteSection
+        heading={`Get a Free ${service.title} Quote`}
+        subtext="Fill out the form below and we'll get back to you within one business day with a custom estimate for your project."
       />
     </>
   );

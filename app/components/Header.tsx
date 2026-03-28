@@ -37,9 +37,15 @@ export default function Header() {
           ))}
           <a
             href={PHONE_HREF}
-            className="rounded-full bg-forest px-5 py-2 text-sm font-bold text-white transition-colors hover:bg-forest-dark"
+            className="text-sm font-bold text-forest transition-colors hover:text-forest-dark"
           >
             {PHONE}
+          </a>
+          <a
+            href="#quote"
+            className="rounded-full bg-forest px-5 py-2 text-sm font-bold text-white transition-colors hover:bg-forest-dark"
+          >
+            Request a Free Quote
           </a>
         </nav>
 
@@ -77,10 +83,11 @@ export default function Header() {
             </Link>
           ))}
           <a
-            href={PHONE_HREF}
+            href="#quote"
+            onClick={() => setMobileOpen(false)}
             className="mt-2 block rounded-full bg-forest px-5 py-2 text-center text-sm font-bold text-white transition-colors hover:bg-forest-dark"
           >
-            {PHONE}
+            Request a Free Quote
           </a>
         </nav>
       )}

@@ -8,6 +8,7 @@ import {
   GoogleTagManagerScript,
   GoogleTagManagerNoscript,
 } from "./components/GoogleTagManager";
+import MobileCTABar from "./components/MobileCTABar";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -49,12 +50,13 @@ export default function RootLayout({
       <head>
         <GoogleTagManagerScript />
       </head>
-      <body className="min-h-full flex flex-col font-body">
+      <body className="min-h-full flex flex-col pb-14 font-body md:pb-0">
         <GoogleTagManagerNoscript />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
         <JsonLd />
+        <MobileCTABar />
       </body>
     </html>
   );

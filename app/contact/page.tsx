@@ -20,7 +20,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="font-heading text-4xl font-bold text-charcoal md:text-5xl">
-              Get Your Free Estimate
+              Request a Free Quote
             </h1>
             <p className="mt-4 text-lg text-slate">
               Fill out the form below and we&apos;ll get back to you within one
@@ -30,7 +30,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20">
+      <section id="quote" className="scroll-mt-20 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-5">
             {/* Form */}

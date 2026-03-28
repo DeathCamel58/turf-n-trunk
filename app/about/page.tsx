@@ -1,6 +1,6 @@
 import { createMetadata } from "@/app/lib/metadata";
 import ServiceArea from "@/app/components/ServiceArea";
-import CTABanner from "@/app/components/CTABanner";
+import QuoteSection from "@/app/components/QuoteSection";
 
 export const metadata = createMetadata(
   "About Turf n Trunk",
@@ -106,11 +106,9 @@ export default function AboutPage() {
 
       <ServiceArea />
 
-      <CTABanner
-        heading="Let's Work Together"
-        subtext="Ready to transform your outdoor space? Contact us for a free consultation and estimate."
-        buttonText="Get in Touch"
-        buttonHref="/contact"
+      <QuoteSection
+        heading="Ready to Work Together?"
+        subtext="Fill out the form below for a free, no-obligation consultation and estimate."
       />
     </>
   );

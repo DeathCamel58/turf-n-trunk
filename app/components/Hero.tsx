@@ -27,12 +27,12 @@ export default function Hero() {
               Serving Peachtree City, Fayetteville, Senoia, Newnan, and Tyrone.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Link
-                href="/contact"
+              <a
+                href="#quote"
                 className="rounded-full bg-cream px-8 py-3 text-center font-bold text-forest transition-colors hover:bg-white"
               >
                 Request a Free Quote
-              </Link>
+              </a>
               <Link
                 href="/services"
                 className="rounded-full border-2 border-white/40 px-8 py-3 text-center font-bold text-white transition-colors hover:border-white hover:bg-white/10"

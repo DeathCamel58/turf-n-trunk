@@ -4,7 +4,7 @@ import ServicesOverview from "./components/ServicesOverview";
 import TrustSignals from "./components/TrustSignals";
 import ServiceArea from "./components/ServiceArea";
 import Testimonials from "./components/Testimonials";
-import CTABanner from "./components/CTABanner";
+import QuoteSection from "./components/QuoteSection";
 
 export const metadata = createMetadata(
   "Professional Landscaping & Lawn Care in Peachtree City, GA",
@@ -19,11 +19,9 @@ export default function Home() {
       <TrustSignals />
       <ServiceArea />
       <Testimonials />
-      <CTABanner
+      <QuoteSection
         heading="Ready to Transform Your Yard?"
-        subtext="Get a free, no-obligation estimate for your landscaping project. We'd love to help you create the outdoor space you've always wanted."
-        buttonText="Request a Free Quote"
-        buttonHref="/contact"
+        subtext="Fill out the form below for a free, no-obligation estimate. We'd love to help you create the outdoor space you've always wanted."
       />
     </>
   );

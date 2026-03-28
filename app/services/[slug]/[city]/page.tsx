@@ -6,8 +6,8 @@ import { SERVICE_CONTENT } from "../content";
 import { CITY_CONTENT } from "./city-content";
 import PlaceholderImage from "@/app/components/PlaceholderImage";
 import ServiceIcon from "@/app/components/ServiceIcon";
-import CTABanner from "@/app/components/CTABanner";
 import FaqJsonLd from "@/app/components/FaqJsonLd";
+import QuoteSection from "@/app/components/QuoteSection";
 
 export async function generateStaticParams() {
   const params: { slug: string; city: string }[] = [];
@@ -97,12 +97,12 @@ export default async function CityServicePage({
                 {cityInfo.intro}
               </p>
               <p className="mt-3 text-sm text-white/60">{cityInfo.nearbyAreas}</p>
-              <Link
-                href="/contact"
+              <a
+                href="#quote"
                 className="mt-8 inline-block rounded-full bg-cream px-8 py-3 font-bold text-forest transition-colors hover:bg-white"
               >
-                Get a Free Estimate in {cityName}
-              </Link>
+                Request a Free Quote
+              </a>
             </div>
           </div>
         </div>
@@ -188,11 +188,9 @@ export default async function CityServicePage({
         </section>
       )}
 
-      <CTABanner
-        heading={`Get Professional ${service.title} in ${cityName}`}
-        subtext={`Contact Turf n Trunk today for a free, no-obligation estimate for your ${cityName} property.`}
-        buttonText="Request a Free Quote"
-        buttonHref="/contact"
+      <QuoteSection
+        heading={`Get a Free ${service.title} Quote in ${cityName}`}
+        subtext={`Fill out the form below for a free estimate on ${service.title.toLowerCase()} for your ${cityName} property.`}
       />
     </>
   );
