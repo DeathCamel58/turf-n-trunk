@@ -5,7 +5,8 @@ import PhoneLink from "@/app/components/PhoneLink";
 
 export const metadata = createMetadata(
   "Thank You",
-  "Thank you for contacting Turf n Trunk. We've received your message and will get back to you within one business day."
+  "Thank you for contacting Turf n Trunk. We've received your message and will get back to you within one business day.",
+  "/contact/thank-you"
 );
 
 export default function ThankYouPage() {

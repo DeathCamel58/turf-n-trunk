@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { SERVICES, CITY_SLUGS } from "@/app/lib/constants";
+import { SERVICES, CITY_SLUGS, SITE_URL } from "@/app/lib/constants";
 import { SERVICE_CONTENT } from "./content";
 import PlaceholderImage from "@/app/components/PlaceholderImage";
 import ServiceIcon from "@/app/components/ServiceIcon";
@@ -21,15 +21,19 @@ export async function generateMetadata({
   const content = SERVICE_CONTENT[slug];
   if (!content) return {};
 
+  const canonical = `${SITE_URL}/services/${slug}`;
+
   return {
     title: content.metaTitle,
     description: content.metaDescription,
+    alternates: { canonical },
     openGraph: {
       title: content.metaTitle,
       description: content.metaDescription,
       type: "website",
       locale: "en_US",
       siteName: "Turf n Trunk",
+      url: canonical,
     },
   };
 }

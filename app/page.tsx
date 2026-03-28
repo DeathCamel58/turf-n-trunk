@@ -8,7 +8,8 @@ import QuoteSection from "./components/QuoteSection";
 
 export const metadata = createMetadata(
   "Professional Landscaping & Lawn Care in Peachtree City, GA",
-  "Turf n Trunk provides expert landscaping, lawn care, tree service, hardscaping, and irrigation for Peachtree City, Fayetteville, Senoia, Newnan, and Tyrone, GA. Request a free quote today."
+  "Turf n Trunk provides expert landscaping, lawn care, tree service, hardscaping, and irrigation for Peachtree City, Fayetteville, Senoia, Newnan, and Tyrone, GA. Request a free quote today.",
+  "/"
 );
 
 export default function Home() {

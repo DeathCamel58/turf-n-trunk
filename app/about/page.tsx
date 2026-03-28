@@ -4,7 +4,8 @@ import QuoteSection from "@/app/components/QuoteSection";
 
 export const metadata = createMetadata(
   "About Turf n Trunk",
-  "Learn about Turf n Trunk, a locally owned landscaping company proudly serving Peachtree City, Fayetteville, Senoia, Newnan, and Tyrone, GA with quality lawn care and landscaping services."
+  "Learn about Turf n Trunk, a locally owned landscaping company proudly serving Peachtree City, Fayetteville, Senoia, Newnan, and Tyrone, GA with quality lawn care and landscaping services.",
+  "/about"
 );
 
 const VALUES = [

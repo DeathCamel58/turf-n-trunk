@@ -6,7 +6,8 @@ import QuoteSection from "@/app/components/QuoteSection";
 
 export const metadata = createMetadata(
   "Landscaping Services in Peachtree City, GA",
-  "Explore our full range of landscaping services including lawn care, landscape design, tree & shrub care, mulching, seasonal cleanups, hardscaping, and irrigation in the Peachtree City, GA area."
+  "Explore our full range of landscaping services including lawn care, landscape design, tree & shrub care, mulching, seasonal cleanups, hardscaping, and irrigation in the Peachtree City, GA area.",
+  "/services"
 );
 
 export default function ServicesPage() {

@@ -11,7 +11,8 @@ import PhoneLink from "@/app/components/PhoneLink";
 
 export const metadata = createMetadata(
   "Contact Us | Request a Quote",
-  "Get a free landscaping estimate from Turf n Trunk. Serving Peachtree City, Fayetteville, Senoia, Newnan, and Tyrone, GA. Call us or fill out our quote request form."
+  "Get a free landscaping estimate from Turf n Trunk. Serving Peachtree City, Fayetteville, Senoia, Newnan, and Tyrone, GA. Call us or fill out our quote request form.",
+  "/contact"
 );
 
 export default function ContactPage() {

@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { SERVICES, CITY_SLUGS } from "@/app/lib/constants";
+import { SERVICES, CITY_SLUGS, SITE_URL } from "@/app/lib/constants";
 import { SERVICE_CONTENT } from "../content";
 import { CITY_CONTENT } from "./city-content";
 import PlaceholderImage from "@/app/components/PlaceholderImage";
@@ -32,15 +32,19 @@ export async function generateMetadata({
   const title = `${service.title} in ${cityName}, GA`;
   const description = `Professional ${service.title.toLowerCase()} services in ${cityName}, GA. Turf n Trunk provides expert ${service.shortDescription.toLowerCase()} Serving ${cityName} and surrounding areas.`;
 
+  const canonical = `${SITE_URL}/services/${slug}/${city}`;
+
   return {
     title,
     description,
+    alternates: { canonical },
     openGraph: {
       title: `${title} | Turf n Trunk`,
       description,
       type: "website",
       locale: "en_US",
       siteName: "Turf n Trunk",
+      url: canonical,
     },
   };
 }
