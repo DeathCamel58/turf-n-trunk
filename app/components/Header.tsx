@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { PHONE, PHONE_HREF } from "@/app/lib/constants";
+import PhoneLink from "./PhoneLink";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -35,12 +36,12 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <a
+          <PhoneLink
             href={PHONE_HREF}
             className="text-sm font-bold text-forest transition-colors hover:text-forest-dark"
           >
             {PHONE}
-          </a>
+          </PhoneLink>
           <a
             href="#quote"
             className="rounded-full bg-forest px-5 py-2 text-sm font-bold text-white transition-colors hover:bg-forest-dark"

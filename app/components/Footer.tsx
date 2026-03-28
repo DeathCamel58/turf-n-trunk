@@ -6,6 +6,7 @@ import {
   EMAIL,
   SERVICE_AREAS,
 } from "@/app/lib/constants";
+import PhoneLink from "./PhoneLink";
 
 const QUICK_LINKS = [
   { href: "/", label: "Home" },
@@ -31,9 +32,9 @@ export default function Footer() {
               communities.
             </p>
             <p className="mt-4 text-sm">
-              <a href={PHONE_HREF} className="hover:text-sage-light transition-colors">
+              <PhoneLink href={PHONE_HREF} className="hover:text-sage-light transition-colors">
                 {PHONE}
-              </a>
+              </PhoneLink>
             </p>
             <p className="text-sm">
               <a href={`mailto:${EMAIL}`} className="hover:text-sage-light transition-colors">

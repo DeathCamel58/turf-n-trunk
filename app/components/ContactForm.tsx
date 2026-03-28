@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { RECAPTCHA_SITE_KEY } from "@/app/lib/constants";
+import { trackEvent } from "@/app/lib/analytics";
 
 declare global {
   interface Window {
@@ -101,6 +102,9 @@ export default function ContactForm() {
         return;
       }
 
+      trackEvent("form_submission", {
+        form_name: "quote_request",
+      });
       router.push("/contact/thank-you");
     } catch {
       setError("Something went wrong. Please try again.");
