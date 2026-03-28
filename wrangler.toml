@@ -1,0 +1,9 @@
+name = "turf-n-trunk"
+
+pages_build_output_dir = "out"
+
+[vars]
+# Non-secret environment variables can go here.
+# Secrets (RECAPTCHA_SECRET_KEY, ESPOCRM_API_URL) should be set via:
+#   npx wrangler pages secret put RECAPTCHA_SECRET_KEY
+#   npx wrangler pages secret put ESPOCRM_API_URL
