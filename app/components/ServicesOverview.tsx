@@ -4,7 +4,7 @@ import ServiceCard from "./ServiceCard";
 
 export default function ServicesOverview() {
   return (
-    <section className="py-16 sm:py-20">
+    <section className="relative -mt-1 bg-sand py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="font-heading text-3xl font-bold text-charcoal md:text-4xl">
