@@ -8,6 +8,7 @@ export interface ServicePageContent {
     heading: string;
     body: string;
     items?: string[];
+    image?: string; // key from the optimized image manifest
   }[];
   faqs: {
     question: string;
@@ -27,6 +28,7 @@ export const SERVICE_CONTENT: Record<string, ServicePageContent> = {
     sections: [
       {
         heading: "Mowing & Edging",
+        image: "lawn-mowing",
         body: "Consistent mowing at the right height is one of the most important things you can do for your lawn's health. Our crews use professional-grade equipment and follow best practices for your grass type — whether it's Bermuda, Zoysia, or Fescue. Every visit includes mowing, edging along walkways and beds, and blowing clean all hard surfaces.",
         items: [
           "Weekly & bi-weekly mowing schedules",
@@ -37,6 +39,7 @@ export const SERVICE_CONTENT: Record<string, ServicePageContent> = {
       },
       {
         heading: "Fertilization & Weed Control",
+        image: "lawn-fertilization",
         body: "Georgia's climate supports aggressive weed growth and demands a tailored fertilization program. We apply the right nutrients at the right time to promote dense, vigorous turf that naturally crowds out weeds. Our programs include pre-emergent and post-emergent treatments to keep your lawn weed-free year-round.",
         items: [
           "Custom fertilization programs for warm and cool-season grasses",
@@ -47,6 +50,7 @@ export const SERVICE_CONTENT: Record<string, ServicePageContent> = {
       },
       {
         heading: "Aeration & Overseeding",
+        image: "lawn-aeration",
         body: "Compacted soil prevents water, air, and nutrients from reaching your lawn's roots. Core aeration relieves compaction and creates channels for better root growth. For Fescue lawns, we pair aeration with overseeding in the fall to thicken your turf and fill in thin areas before winter.",
         items: [
           "Core aeration to relieve soil compaction",
@@ -86,16 +90,17 @@ export const SERVICE_CONTENT: Record<string, ServicePageContent> = {
     sections: [
       {
         heading: "Custom Design Process",
+        image: "landscape-design",
         body: "Great landscapes start with great planning. We begin with an on-site consultation to understand your goals, assess your property's conditions (sun exposure, soil, drainage, existing features), and discuss your budget. From there, we develop a detailed design that balances aesthetics, function, and long-term maintainability.",
         items: [
           "On-site property assessment and consultation",
           "Custom design plans with plant selections",
           "Phased implementation options to fit your budget",
-          "3D renderings available for larger projects",
         ],
       },
       {
         heading: "Planting & Installation",
+        image: "flower-planting",
         body: "Our installation crews bring your design to life with precision and care. We source high-quality plants, trees, and shrubs from trusted local nurseries and install them with proper technique to ensure strong establishment. Every project includes soil preparation, proper spacing, mulching, and initial watering setup.",
         items: [
           "Foundation plantings and accent beds",
@@ -106,6 +111,7 @@ export const SERVICE_CONTENT: Record<string, ServicePageContent> = {
       },
       {
         heading: "Renovation & Refresh",
+        image: "tree-bed-flowers",
         body: "Not every landscape needs a complete overhaul. Sometimes a strategic renovation — removing overgrown plants, adding fresh color, or reconfiguring a bed layout — is all it takes to dramatically improve your property's appearance. We specialize in working with what you have and making smart upgrades that deliver maximum impact.",
         items: [
           "Overgrown landscape renovation",
@@ -145,6 +151,7 @@ export const SERVICE_CONTENT: Record<string, ServicePageContent> = {
     sections: [
       {
         heading: "Pruning & Shaping",
+        image: "hedge trimming",
         body: "Proper pruning promotes healthy growth, improves air circulation, and maintains the natural shape of your trees and shrubs. Our team follows industry best practices — we never top trees or use harmful techniques. We prune for structure, safety, and aesthetics, whether it's a formal hedge or a mature oak.",
         items: [
           "Crown cleaning and thinning",
@@ -155,6 +162,7 @@ export const SERVICE_CONTENT: Record<string, ServicePageContent> = {
       },
       {
         heading: "Disease & Pest Management",
+        image: "pest-spray",
         body: "Georgia's warm, humid climate creates ideal conditions for tree diseases and insect infestations. We identify problems early and apply targeted treatments to protect your plants. Common issues we treat include fungal infections, scale insects, borers, and nutrient deficiencies.",
         items: [
           "Disease diagnosis and treatment plans",
@@ -165,6 +173,7 @@ export const SERVICE_CONTENT: Record<string, ServicePageContent> = {
       },
       {
         heading: "Tree & Shrub Planting",
+        image: "tree-planting",
         body: "Adding new trees and shrubs is one of the best investments you can make in your property. We help you select the right species for your site conditions, plant them correctly, and set up a care plan to ensure strong establishment. We source from quality local nurseries and stand behind our installations.",
         items: [
           "Species selection guidance for your site",
@@ -204,6 +213,7 @@ export const SERVICE_CONTENT: Record<string, ServicePageContent> = {
     sections: [
       {
         heading: "Mulch Types & Options",
+        image: "mulch-varieties",
         body: "We offer a variety of mulch materials to suit your aesthetic preferences and functional needs. Whether you prefer the classic look of double-shredded hardwood, the natural feel of pine straw, or the durability of decorative stone, we'll help you choose the right option for each area of your landscape.",
         items: [
           "Double-shredded hardwood mulch (natural and dyed)",
@@ -214,6 +224,7 @@ export const SERVICE_CONTENT: Record<string, ServicePageContent> = {
       },
       {
         heading: "Bed Preparation & Installation",
+        image: "mulch-beds",
         body: "Proper bed preparation is key to getting the most out of your mulch investment. We edge beds cleanly, remove weeds and old decomposed mulch when needed, and apply fresh material at the correct depth — typically 2 to 3 inches for organic mulch. We take care to keep mulch pulled back from tree trunks and plant crowns to prevent rot.",
         items: [
           "Clean bed edging and weed removal",
@@ -224,6 +235,7 @@ export const SERVICE_CONTENT: Record<string, ServicePageContent> = {
       },
       {
         heading: "Seasonal Refresh Programs",
+        image: "rock-walkway",
         body: "Mulch breaks down over time, and Georgia's sun and rain can fade and thin your coverage faster than you'd expect. Our seasonal refresh programs keep your beds looking sharp year-round with scheduled top-ups in spring and fall — the two times that make the biggest visual impact.",
         items: [
           "Spring refresh for peak curb appeal",
@@ -263,6 +275,7 @@ export const SERVICE_CONTENT: Record<string, ServicePageContent> = {
     sections: [
       {
         heading: "Spring Cleanup",
+        image: "weeding",
         body: "After a long winter, your landscape needs attention to kick off the growing season strong. Our spring cleanup service clears away winter debris, cuts back dormant perennials, edges beds, and prepares your landscape for fresh mulch and new plantings. It's the reset your yard needs to look great all summer.",
         items: [
           "Winter debris and branch removal",
@@ -273,6 +286,7 @@ export const SERVICE_CONTENT: Record<string, ServicePageContent> = {
       },
       {
         heading: "Fall Cleanup & Leaf Removal",
+        image: "leaf-blowing",
         body: "Peachtree City's tree canopy is one of its best features — until fall, when those leaves blanket every surface. Our fall cleanup service removes leaves from your lawn, beds, and gutters to prevent turf damage, mold growth, and drainage problems over winter. We use a combination of blowing, raking, and vacuum collection for thorough results.",
         items: [
           "Full-property leaf removal",
@@ -283,6 +297,7 @@ export const SERVICE_CONTENT: Record<string, ServicePageContent> = {
       },
       {
         heading: "Debris Hauling & Property Tidying",
+        image: "yard-waste-removal",
         body: "Whether it's storm debris, a pile of old landscaping material, or general yard waste that's been accumulating, we haul it away so your property looks clean and well-maintained. This service is available year-round, not just during seasonal cleanups.",
         items: [
           "Storm damage and branch cleanup",
@@ -322,6 +337,7 @@ export const SERVICE_CONTENT: Record<string, ServicePageContent> = {
     sections: [
       {
         heading: "Patios & Walkways",
+        image: "rock-walkway",
         body: "A well-designed patio creates the perfect space for relaxing, entertaining, and enjoying your yard. We work with a range of materials — natural stone, concrete pavers, brick — to create patios and walkways that complement your home's architecture and fit your lifestyle. Every installation starts with proper excavation, base preparation, and drainage planning for a surface that stays level and beautiful for years.",
         items: [
           "Custom paver patio design and installation",
@@ -332,6 +348,7 @@ export const SERVICE_CONTENT: Record<string, ServicePageContent> = {
       },
       {
         heading: "Retaining Walls & Structures",
+        image: "retaining-wall",
         body: "Retaining walls solve practical problems — erosion, grade changes, unusable slopes — while adding visual structure to your landscape. We build walls using segmental block, natural stone, and timber, and engineer them properly for long-term stability. Whether it's a small garden wall or a multi-tier system, we handle the engineering and construction.",
         items: [
           "Segmental retaining wall systems",
@@ -342,6 +359,7 @@ export const SERVICE_CONTENT: Record<string, ServicePageContent> = {
       },
       {
         heading: "Outdoor Living Features",
+        image: "patio",
         body: "Fire pits, outdoor kitchens, seating walls, and pergola foundations turn your backyard into a year-round living space. We work with you to design features that match how you actually use your yard and build them with materials that handle Georgia's heat, rain, and occasional freeze cycles.",
         items: [
           "Fire pits and outdoor fireplaces",
@@ -381,6 +399,7 @@ export const SERVICE_CONTENT: Record<string, ServicePageContent> = {
     sections: [
       {
         heading: "System Design & Installation",
+        image: "sprinklers",
         body: "Every property is different, and cookie-cutter irrigation doesn't work. We start with a detailed assessment of your property — lawn zones, planting beds, sun exposure, soil type, and water pressure — to design a system that delivers the right amount of water to every area. Our installations use quality components and follow local codes and backflow prevention requirements.",
         items: [
           "Custom zone design for optimal coverage",
@@ -391,6 +410,7 @@ export const SERVICE_CONTENT: Record<string, ServicePageContent> = {
       },
       {
         heading: "Repair & Maintenance",
+        image: "sprinkler-valve",
         body: "Irrigation systems need regular attention to perform efficiently. Broken heads, leaky valves, and misaligned sprinklers waste water and leave dry spots. We diagnose and repair issues quickly, and our seasonal maintenance visits keep your system running at peak efficiency year after year.",
         items: [
           "Sprinkler head repair and replacement",
@@ -401,6 +421,7 @@ export const SERVICE_CONTENT: Record<string, ServicePageContent> = {
       },
       {
         heading: "Seasonal Startup & Winterization",
+        image: "irrigation-controller",
         body: "Georgia winters are mild but can still freeze hard enough to damage irrigation lines and valves. Our seasonal services include spring startup with full system checks and fall winterization to protect your investment. We test every zone, adjust run times for the season, and flag any issues before they become expensive problems.",
         items: [
           "Spring activation and full system audit",

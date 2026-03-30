@@ -5,7 +5,17 @@ import { SERVICES, CITY_SLUGS, SITE_URL } from "@/app/lib/constants";
 import { SERVICE_CONTENT } from "../content";
 import { CITY_CONTENT } from "./city-content";
 import PlaceholderImage from "@/app/components/PlaceholderImage";
+import OptimizedImage from "@/app/components/OptimizedImage";
+import type { OptimizedImageData } from "@/app/components/OptimizedImage";
 import ServiceIcon from "@/app/components/ServiceIcon";
+
+let imageManifest: Record<string, OptimizedImageData> = {};
+try {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  imageManifest = require("../../../../public/images/optimized/manifest.json");
+} catch {
+  // Manifest not yet generated
+}
 import FaqJsonLd from "@/app/components/FaqJsonLd";
 import QuoteSection from "@/app/components/QuoteSection";
 
@@ -118,6 +128,9 @@ export default async function CityServicePage({
           <div className="space-y-20">
             {content.sections.map((section, index) => {
               const isReversed = index % 2 === 1;
+              const optimizedImg = section.image
+                ? imageManifest[section.image]
+                : null;
               return (
                 <div
                   key={section.heading}
@@ -126,11 +139,20 @@ export default async function CityServicePage({
                   }`}
                 >
                   <div className="lg:w-1/2">
-                    <PlaceholderImage
-                      variant={content.imageVariant}
-                      label={section.heading}
-                      className="aspect-video w-full"
-                    />
+                    {optimizedImg ? (
+                      <OptimizedImage
+                        image={optimizedImg}
+                        alt={section.heading}
+                        className="aspect-video w-full rounded-lg"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                    ) : (
+                      <PlaceholderImage
+                        variant={content.imageVariant}
+                        label={section.heading}
+                        className="aspect-video w-full"
+                      />
+                    )}
                   </div>
                   <div className="lg:w-1/2">
                     <h2 className="font-heading text-2xl font-bold text-charcoal md:text-3xl">
