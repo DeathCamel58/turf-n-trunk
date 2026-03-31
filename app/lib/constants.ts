@@ -1,12 +1,12 @@
 export const BUSINESS_NAME = "Turf n Trunk";
 export const SITE_URL = "https://turf-n-trunk.com";
-export const GTM_ID = "";
+export const GTM_ID = "GTM-PH3FJTZJ";
 export const RECAPTCHA_SITE_KEY = "6LcTE5ssAAAAAAm2bWDwfT-8n2JOglRxfrDe3Ul7";
 export const PHONE = "(770) 954-6057";
 export const PHONE_HREF = "tel:+17709546057";
 export const EMAIL = "info@turf-n-trunk.com";
 export const ADDRESS = {
-  street: "123 Main Street",
+  street: "109 Fountain Head",
   city: "Peachtree City",
   state: "GA",
   zip: "30269",
