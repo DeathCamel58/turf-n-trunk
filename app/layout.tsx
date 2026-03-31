@@ -9,6 +9,7 @@ import {
   GoogleTagManagerNoscript,
 } from "./components/GoogleTagManager";
 import MobileCTABar from "./components/MobileCTABar";
+import { SITE_URL } from "./lib/constants";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -23,6 +24,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     template: "%s | Turf n Trunk",
     default:
