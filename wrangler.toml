@@ -2,9 +2,6 @@ name = "turf-n-trunk"
 
 pages_build_output_dir = "out"
 
-[build]
-command = "npm run build"
-
 [vars]
 # Non-secret environment variables can go here.
 # Secrets (RECAPTCHA_SECRET_KEY, ESPOCRM_API_URL) should be set via:
