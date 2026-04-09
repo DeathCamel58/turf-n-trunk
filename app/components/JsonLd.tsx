@@ -10,7 +10,7 @@ import {
 export default function JsonLd() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "LandscapingBusiness",
+    "@type": "HomeAndConstructionBusiness",
     name: BUSINESS_NAME,
     description:
       "Professional landscaping, lawn care, tree service, and hardscaping serving Peachtree City, GA and surrounding communities.",
