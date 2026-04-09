@@ -1,17 +1,16 @@
 import Link from "next/link";
+import { readFileSync, existsSync } from "node:fs";
+import { join } from "node:path";
 import GrassBlades from "./GrassBlades";
 import HeroBackground from "./HeroBackground";
 import type { OptimizedImageData } from "./OptimizedImage";
 
-// Import the manifest at build time to get the hero image data.
-// Falls back to a simple background if the image hasn't been optimized.
+// Load the image manifest at build time using fs (avoids Turbopack require() warnings)
 let heroImage: OptimizedImageData | null = null;
-try {
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const manifest = require("../../public/images/optimized/manifest.json");
+const manifestPath = join(process.cwd(), "public/images/optimized/manifest.json");
+if (existsSync(manifestPath)) {
+  const manifest = JSON.parse(readFileSync(manifestPath, "utf-8"));
   heroImage = manifest["Corner-Lot-Landscaping"] ?? null;
-} catch {
-  // Manifest doesn't exist yet — pipeline hasn't run
 }
 
 export default function Hero() {
