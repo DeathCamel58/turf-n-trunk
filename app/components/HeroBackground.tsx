@@ -46,7 +46,7 @@ export default function HeroBackground({ image }: HeroBackgroundProps) {
       />
       {/* Full image — parallax */}
       <div
-        className={`absolute inset-0 bg-fixed bg-cover bg-center transition-opacity duration-700 ${
+        className={`absolute inset-0 md:bg-fixed bg-cover bg-center transition-opacity duration-700 ${
           loaded ? "opacity-100" : "opacity-0"
         }`}
         style={{ backgroundImage: `url('${fullUrl}')` }}

@@ -21,7 +21,7 @@ export default function Hero() {
         <HeroBackground image={heroImage} />
       ) : (
         <div
-          className="absolute inset-0 bg-fixed bg-cover bg-center"
+          className="absolute inset-0 md:bg-fixed bg-cover bg-center"
           style={{ backgroundImage: "url('/Corner-Lot-Landscaping.jpg')" }}
           aria-hidden="true"
         />
