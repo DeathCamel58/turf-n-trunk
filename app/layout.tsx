@@ -37,6 +37,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "Turf n Trunk",
   },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
