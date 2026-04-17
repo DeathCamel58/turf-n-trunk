@@ -24,11 +24,11 @@ export default function Footer() {
           {/* Business info */}
           <div>
             <Image
-              src="/logo.svg"
+              src="/logo-bw.svg"
               alt="Turf n Trunk Landscaping"
               width={180}
               height={45}
-              className="h-10 w-auto brightness-0 invert"
+              className="h-10 w-auto invert"
             />
             <p className="mt-3 text-sm text-white/70">
               Professional landscaping for Peachtree City and the surrounding
