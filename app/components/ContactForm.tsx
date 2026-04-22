@@ -17,5 +17,5 @@ export default function ContactForm() {
     container.appendChild(script);
   }, []);
 
-  return <div ref={containerRef} />;
+  return <div ref={containerRef} className="isolate" />;
 }
