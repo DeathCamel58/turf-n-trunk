@@ -36,7 +36,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-5">
             {/* Form */}
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-3 rounded-xl border border-sage/30 bg-cream overflow-hidden">
               <ContactForm />
             </div>
 

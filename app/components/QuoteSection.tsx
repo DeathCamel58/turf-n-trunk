@@ -21,7 +21,7 @@ export default function QuoteSection({
           <p className="mt-3 text-white/70">{subtext}</p>
         </div>
         <div className="grid items-center gap-12 lg:grid-cols-5">
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3 rounded-xl border border-sage/30 bg-cream overflow-hidden">
             <ContactForm />
           </div>
 
